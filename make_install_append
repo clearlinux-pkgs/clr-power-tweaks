@@ -1,0 +1,2 @@
+mkdir %{buildroot}/usr/lib/systemd/system/multi-user.target.wants
+ln -s ../clr-power.service %{buildroot}/usr/lib/systemd/system/multi-user.target.wants/clr-power.service
