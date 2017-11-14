@@ -4,7 +4,7 @@
 #
 Name     : clr-power-tweaks
 Version  : 160
-Release  : 97
+Release  : 98
 URL      : http://localhost/cgit/projects/clr-power-tweaks/snapshot/clr-power-tweaks-160.tar.gz
 Source0  : http://localhost/cgit/projects/clr-power-tweaks/snapshot/clr-power-tweaks-160.tar.gz
 Summary  : No detailed summary available
