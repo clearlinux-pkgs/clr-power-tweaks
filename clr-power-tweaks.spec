@@ -4,7 +4,7 @@
 #
 Name     : clr-power-tweaks
 Version  : 171
-Release  : 110
+Release  : 111
 URL      : http://localhost/cgit/projects/clr-power-tweaks/snapshot/clr-power-tweaks-171.tar.gz
 Source0  : http://localhost/cgit/projects/clr-power-tweaks/snapshot/clr-power-tweaks-171.tar.gz
 Summary  : No detailed summary available
