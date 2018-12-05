@@ -1,2 +1,2 @@
-mkdir %{buildroot}/usr/lib/systemd/system/multi-user.target.wants
-ln -s ../clr-power.service %{buildroot}/usr/lib/systemd/system/multi-user.target.wants/clr-power.service
+mkdir %{buildroot}/usr/lib/systemd/system/timer.target.wants
+ln -s ../clr-power.timer %{buildroot}/usr/lib/systemd/system/timer.target.wants/clr-power.timer
