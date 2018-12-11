@@ -1,2 +1,2 @@
-mkdir %{buildroot}/usr/lib/systemd/system/timer.target.wants
-ln -s ../clr-power.timer %{buildroot}/usr/lib/systemd/system/timer.target.wants/clr-power.timer
+mkdir %{buildroot}/usr/lib/systemd/system/timers.target.wants
+ln -s ../clr-power.timer %{buildroot}/usr/lib/systemd/system/timers.target.wants/clr-power.timer
