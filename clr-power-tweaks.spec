@@ -4,7 +4,7 @@
 #
 Name     : clr-power-tweaks
 Version  : 211
-Release  : 139
+Release  : 140
 URL      : https://github.com/clearlinux/clr-power-tweaks/releases/download/v211/clr-power-tweaks-211.tar.gz
 Source0  : https://github.com/clearlinux/clr-power-tweaks/releases/download/v211/clr-power-tweaks-211.tar.gz
 Summary  : No detailed summary available
@@ -75,7 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1586887320
+export SOURCE_DATE_EPOCH=1619063411
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -92,10 +92,10 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1586887320
+export SOURCE_DATE_EPOCH=1619063411
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-power-tweaks
 cp %{_builddir}/clr-power-tweaks-211/COPYING %{buildroot}/usr/share/package-licenses/clr-power-tweaks/8624bcdae55baeef00cd11d5dfcfa60f68710a02
