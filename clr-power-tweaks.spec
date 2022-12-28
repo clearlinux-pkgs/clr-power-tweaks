@@ -4,7 +4,7 @@
 #
 Name     : clr-power-tweaks
 Version  : 222
-Release  : 151
+Release  : 152
 URL      : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/222.tar.gz
 Source0  : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/222.tar.gz
 Summary  : No detailed summary available
@@ -20,6 +20,9 @@ BuildRequires : automake-dev
 BuildRequires : libtool-dev
 BuildRequires : m4
 BuildRequires : pkgconfig(systemd)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 ## clr-power-tweaks
@@ -78,15 +81,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1660236550
+export SOURCE_DATE_EPOCH=1672256317
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 %autogen --disable-static
 make  %{?_smp_mflags}
 
@@ -98,10 +101,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1660236550
+export SOURCE_DATE_EPOCH=1672256317
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-power-tweaks
-cp %{_builddir}/clr-power-tweaks-%{version}/COPYING %{buildroot}/usr/share/package-licenses/clr-power-tweaks/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/clr-power-tweaks-%{version}/COPYING %{buildroot}/usr/share/package-licenses/clr-power-tweaks/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
 %make_install
 ## install_append content
 mkdir %{buildroot}/usr/lib/systemd/system/timers.target.wants
