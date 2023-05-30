@@ -5,7 +5,7 @@
 #
 Name     : clr-power-tweaks
 Version  : 226
-Release  : 156
+Release  : 157
 URL      : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/226.tar.gz
 Source0  : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/226.tar.gz
 Summary  : No detailed summary available
@@ -87,7 +87,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683578588
+export SOURCE_DATE_EPOCH=1685488702
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -118,7 +118,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1683578588
+export SOURCE_DATE_EPOCH=1685488702
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-power-tweaks
 cp %{_builddir}/clr-power-tweaks-%{version}/COPYING %{buildroot}/usr/share/package-licenses/clr-power-tweaks/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
