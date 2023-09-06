@@ -4,10 +4,10 @@
 # Using build pattern: autogen
 #
 Name     : clr-power-tweaks
-Version  : 226
-Release  : 157
-URL      : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/226.tar.gz
-Source0  : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/226.tar.gz
+Version  : 227
+Release  : 158
+URL      : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/227.tar.gz
+Source0  : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/227.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -20,7 +20,6 @@ BuildRequires : autoconf
 BuildRequires : automake-dev
 BuildRequires : libtool-dev
 BuildRequires : m4
-BuildRequires : pkg-config
 BuildRequires : pkgconfig(systemd)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -76,10 +75,10 @@ services components for the clr-power-tweaks package.
 
 
 %prep
-%setup -q -n clr-power-tweaks-226
-cd %{_builddir}/clr-power-tweaks-226
+%setup -q -n clr-power-tweaks-227
+cd %{_builddir}/clr-power-tweaks-227
 pushd ..
-cp -a clr-power-tweaks-226 buildavx2
+cp -a clr-power-tweaks-227 buildavx2
 popd
 
 %build
@@ -87,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685488702
+export SOURCE_DATE_EPOCH=1694016346
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -118,7 +117,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1685488702
+export SOURCE_DATE_EPOCH=1694016346
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-power-tweaks
 cp %{_builddir}/clr-power-tweaks-%{version}/COPYING %{buildroot}/usr/share/package-licenses/clr-power-tweaks/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
