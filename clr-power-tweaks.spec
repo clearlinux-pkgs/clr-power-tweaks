@@ -6,10 +6,10 @@
 # autospec commit: f4a13a5
 #
 Name     : clr-power-tweaks
-Version  : 246
-Release  : 170
-URL      : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/246.tar.gz
-Source0  : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/246.tar.gz
+Version  : 247
+Release  : 171
+URL      : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/247.tar.gz
+Source0  : https://github.com/clearlinux/clr-power-tweaks/archive/refs/tags/247.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -77,10 +77,10 @@ services components for the clr-power-tweaks package.
 
 
 %prep
-%setup -q -n clr-power-tweaks-246
-cd %{_builddir}/clr-power-tweaks-246
+%setup -q -n clr-power-tweaks-247
+cd %{_builddir}/clr-power-tweaks-247
 pushd ..
-cp -a clr-power-tweaks-246 buildavx2
+cp -a clr-power-tweaks-247 buildavx2
 popd
 
 %build
@@ -88,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1735921934
+export SOURCE_DATE_EPOCH=1735922149
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -141,7 +141,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1735921934
+export SOURCE_DATE_EPOCH=1735922149
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-power-tweaks
 cp %{_builddir}/clr-power-tweaks-%{version}/COPYING %{buildroot}/usr/share/package-licenses/clr-power-tweaks/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
